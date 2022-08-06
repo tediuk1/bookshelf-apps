@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffdede;
+  height: 100%;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #abc9ff;
+  padding: 1em;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+header img {
+  width: 60px;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input-container {
+  flex-basis: 60%;
+  margin: 5px;
+}
+
+.input-container h2 {
+  background-color: #eb4747;
+  text-align: center;
+  border-radius: 0.8em;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+#input-buku {
+  background-color: #ff8b8b;
+  border-radius: 0.8em;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  margin: 10px;
+}
+
+.input label {
+  display: block;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.input input {
+  border: 1px solid #ff8b8b;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 0.8em;
+  width: 100%;
+}
+
+.cari-buku h3 {
+  background-color: #eb4747;
+  text-align: center;
+  border-radius: 0.8em;
+  margin-bottom: 5px;
+}
+
+.submit-buku {
+  display: flex;
+}
+
+.input-checkbox {
+  background-color: #eb4747;
+  border-radius: 0.8em;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.input-checkbox label {
+  display: inline;
+  font-size: 18px;
+  margin: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  padding-right: 10px;
+  margin-left: auto;
+}
+
+#input-submit {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #eb4747;
+  color: white;
+  border-radius: 0.8em;
+  transition: 0.5s;
+  border: none;
+}
+
+#input-submit:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.cari-buku h3 {
+  padding: 8px;
+}
+
+#cari-buku {
+  position: relative;
+  border-radius: 0.8em;
+}
+
+#inputCariBuku {
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  width: 100%;
+  border: 1px solid #eb4747;
+}
+
+#cari {
+  font-size: 18px;
+  position: absolute;
+  padding: 5px 10px 5px 10px;
+  right: 0;
+  width: 80px;
+  color: white;
+  background-color: #eb4747;
+  border: 1px solid #ff8b8b;
+  border-radius: 0 20px 20px 0;
+  transition: 0.5s;
+}
+
+#cari:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.detail-buku {
+  flex-basis: 40%;
+  margin: 5px;
+}
+
+.detail-buku h2 {
+  background-color: #eb4747;
+  border-radius: 0.8em;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.book-list {
+  background-color: #ff8b8b;
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: auto;
+}
+
+.book-list::-webkit-scrollbar {
+  width: 8px;
+}
+.book-list::-webkit-scrollbar-track {
+  background-color: #ff8b8b;
+  border-radius: 5px;
+}
+.book-list::-webkit-scrollbar-thumb {
+  background-color: #eb4747;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.book-card {
+  width: 100%;
+  min-height: 100px;
+  background-color: #eb4747;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.book-title {
+  margin-bottom: 10px;
+}
+
+.book-details {
+  color: #b4b4b4;
+  font-size: 15px;
+}
+
+.book-details span {
+  font-weight: normal;
+}
+
+.book-buttons {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.book-buttons button {
+  min-width: 50px;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 20px;
+}
+
+.book-buttons button {
+  transition: 0.5s;
+}
+.done-button {
+  border: 3px solid #ff8b8b;
+}
+.edit-button {
+  border: 3px solid #ff8b8b;
+}
+.delete-button {
+  border: 3px solid #ff8b8b;
+}
+.book-buttons button:hover {
+  filter: brightness(60%);
+  transition: 0.5s;
+}
+
+.edit-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(203, 209, 243, 0.7);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.edit-form {
+  position: absolute;
+  background-color: #ff8b8b;
+  border-radius: 10px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+#closeForm {
+  position: relative;
+  float: right;
+  width: 45px;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 10;
+  top: -30px;
+  left: 30px;
+  border-radius: 50%;
+  border: 1px solid #ff8b8b;
+  background-color: #eb4747;
+}
+
+#edit-buku {
+  position: relative;
+  border-radius: 30px;
+}
+
+#edit-buku h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#edit-submit {
+  padding: 10px;
+  margin-left: 2px;
+  min-width: 100px;
+  font-size: 18px;
+  background-color: #eb4747;
+  color: white;
+  border-radius: 0.8em;
+  border: none;
+  transition: 0.5s;
+}
+
+#edit-submit:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+/* Responsive */
+@media all and (max-width: 1100px) {
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  main {
+    flex-flow: column;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 40px 20px 0 20px;
+  }
+  section:nth-child(2),
+  section:nth-child(3) {
+    margin-top: 50px;
+  }
+
+  .input-container div {
+    position: static;
+  }
+  .edit-container {
+    position: fixed;
+  }
+
+  .detail-buku {
+  }
+
+  .edit-form {
+    width: 90%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #edit-buku {
+    max-width: 700px;
+    padding: 20px;
+  }
+}
