@@ -1,3 +1,3 @@
 # bookshelf-apps
 
-This is a submission assignment from Dicoding, in the Learn to Create Front-End Web for Beginners class
+This is a submission assignment from Dicoding, in the Learn to Create Front-End Web for Beginners class. That is by creating a web bookshelf-apps
